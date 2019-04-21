@@ -4,10 +4,9 @@ from setuptools import setup, find_packages  # pylint: disable=no-name-in-module
 
 install_requires = []
 
-# Python < 3.4 doesn't have enum34
-if sys.version_info[0:2] < (3, 4):
-    install_requires = ['enum34==1.1.6']
-
+extras_require = {
+  ":python_version<'3.4'": ['enum34'],
+}
 
 def dependencies(file):
     with open(file) as f:
@@ -30,6 +29,7 @@ setup(
         'log'
     ],
     install_requires=dependencies('requirements.txt') + install_requires,
+    extras_require=extras_require,
     tests_require=dependencies('requirements-dev.txt'),
     include_package_data=True
 )
