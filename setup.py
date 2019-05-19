@@ -14,15 +14,15 @@ def dependencies(file):
 
 
 setup(
-    name='log_symbols',
+    name='frkl.log_symbols',
     packages=find_packages(exclude=('tests', 'examples')),
     version='0.0.14',
     license='MIT',
     description='Colored symbols for various log levels for Python',
-    long_description='Colored symbols for various log levels for Python. Find the documentation here: https://github.com/manrajgrover/py-log-symbols.',
-    author='Manraj Singh',
-    author_email='manrajsinghgrover@gmail.com',
-    url='https://github.com/manrajgrover/py-log-symbols',
+    long_description='Minor fork of: https://github.com/manrajgrover/py-log-symbols , until upstream versioning is fixed. Colored symbols for various log levels for Python. Find the documentation here: https://github.com/manrajgrover/py-log-symbols.',
+    author='Markus Binsteiner',
+    author_email='markus@frkl.io',
+    url='https://github.com/frkl-downstream/py-log-symbols',
     keywords=[
         'log symbols',
         'symbols',
